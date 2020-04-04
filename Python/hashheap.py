@@ -25,12 +25,12 @@ class hashheap:
 				p = 2 * i + 1 if self.a[2 * i + 1] > self.a[2 * i + 2] else 2 * i + 2
 
 			self.a[i], self.a[p] = self.a[p], self.a[i]
-			self.map[a[i]], self.map[a[p]] = i, p
+			self.map[self.a[i]], self.map[self.a[p]] = i, p
 			i = p
 
 		if 2 * i + 2 == len(self.a) and (self.a[i] > self.a[2 * i + 1] if self.is_min else self.a[i] < self.a[2 * i + 1]):
 			self.a[i], self.a[2 * i + 1] = self.a[2 * i + 1], self.a[i]
-			self.map[a[i]], self.map[a[2 * i + 1]] = i, 2 * i + 1
+			self.map[self.a[i]], self.map[self.a[2 * i + 1]] = i, 2 * i + 1
 			i = 2 * i + 1
 		return i
 	
