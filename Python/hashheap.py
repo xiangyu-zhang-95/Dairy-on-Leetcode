@@ -4,6 +4,9 @@ class hashheap:
 		self.a = []
 		self.map = {}
 	
+	def size(self):
+		return len(self.a)
+	
 	def peek(self):
 		return self.a[0]
 	
