@@ -11,7 +11,7 @@ class hashheap:
 		return self.a[0]
 	
 	def _sift_up(self, i):
-		while i > 0 and (self.a[(i - 1) // 2] < self.a[i] if self.is_min else self.a[(i - 1) // 2] > self.a[i]):
+		while i > 0 and (self.a[(i - 1) // 2] > self.a[i] if self.is_min else self.a[(i - 1) // 2] < self.a[i]):
 			self.a[i], self.a[(i - 1) // 2] = self.a[(i - 1) // 2], self.a[i]
 			self.map[self.a[i]], self.map[self.a[(i - 1)//2]] = i, (i - 1)//2
 			i = (i - 1) // 2
