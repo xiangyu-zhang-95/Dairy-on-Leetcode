@@ -15,7 +15,7 @@ class hashheap:
 		return i
 	
 	def _sift_down(self, i):
-		while 2 * i + 2 <= len(self.a) - 1 and self.a[i] > min(self.a[2 * i + 1], self.a[2 * i + 2]) if self.is_min else self.a[i] < max(self.a[2 * i + 1], self.a[2 * i + 2]):
+		while 2 * i + 2 <= len(self.a) - 1 and (self.a[i] > min(self.a[2 * i + 1], self.a[2 * i + 2]) if self.is_min else self.a[i] < max(self.a[2 * i + 1], self.a[2 * i + 2])):
 			if self.is_min:
 				p = 2 * i + 1 if self.a[2 * i + 1] < self.a[2 * i + 2] else 2 * i + 2
 			else:
@@ -25,7 +25,7 @@ class hashheap:
 			self.map[a[i]], self.map[a[p]] = i, p
 			i = p
 
-		if 2 * i + 2 == len(self.a) and self.a[i] > self.a[2 * i + 1] if self.is_min else self.a[i] < self.a[2 * i + 1]:
+		if 2 * i + 2 == len(self.a) and (self.a[i] > self.a[2 * i + 1] if self.is_min else self.a[i] < self.a[2 * i + 1]):
 			self.a[i], self.a[2 * i + 1] = self.a[2 * i + 1], self.a[i]
 			self.map[a[i]], self.map[a[2 * i + 1]] = i, 2 * i + 1
 			i = 2 * i + 1
@@ -58,9 +58,9 @@ class hashheap:
 			del self.map[v]
 			return
 		
-		self.a[i], self.a[len(a) - 1] = self.a[len(a) - 1], self.a[i]
-		self.map[a[i]], self.map[a[len(a) - 1]] = i, len(a) - 1
-		del self.map[a[len(a) - 1]]
+		self.a[i], self.a[len(self.a) - 1] = self.a[len(self.a) - 1], self.a[i]
+		self.map[self.a[i]], self.map[self.a[len(self.a) - 1]] = i, len(self.a) - 1
+		del self.map[self.a[len(self.a) - 1]]
 		self.a.pop()
 
 		i = self._sift_up(i)
