@@ -56,3 +56,6 @@ class heap:
 		if not self.a:
 			raise Exception("peek empty heap")
 		return self.a[0]
+	
+	def size(self):
+		return len(self.a)
