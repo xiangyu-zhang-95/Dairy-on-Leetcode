@@ -57,5 +57,8 @@ class heap:
 			raise Exception("peek empty heap")
 		return self.a[0]
 	
-	def size(self):
+	def __len__(self):
 		return len(self.a)
+	
+	def __contains__(self, key):
+		return keu in self.a
