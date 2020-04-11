@@ -61,4 +61,4 @@ class heap:
 		return len(self.a)
 	
 	def __contains__(self, key):
-		return keu in self.a
+		return key in self.a
