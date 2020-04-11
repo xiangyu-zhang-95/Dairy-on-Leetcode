@@ -69,3 +69,8 @@ class hashheap:
 		i = self._sift_up(i)
 		self._sift_down(i)
 
+	def __len__(self):
+		return len(self.a)
+	
+	def __contains__(self, key):
+		return key in self.map
