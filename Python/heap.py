@@ -15,25 +15,39 @@ class heap:
 	
 	def _sift_down(self,n):
 		left, right = 2 * n + 1, 2 * n + 2
-		while left <= len(self.a) - 1:
-			l_val = self.a[left]
-			if right == len(self.a):
-				if (self.is_min and self.a[n] <= l_val) or ((not self.is_min) and self.a[n] > l_val):
-					break
-				self.a[n], self.a[left] = self.a[left], self.a[n]
-				break
+		if self.is_min:
+			while left <= len(self.a) - 1:
+				if right == len(self.a):
+					if self.a[n] <= self.a[left]:
+						return
+					self.a[n], self.a[left] = self.a[left], self.a[n]
+					return
 
-			min_child = left if self.a[left] <= self.a[right] else right
-			max_child = right if self.a[left] <= self.a[right] else left
-			if self.is_min:
+				if self.a[left] <= self.a[right]:
+					min_child, max_child = left, right
+				else:
+					min_child, max_child = right, left
+
 				if self.a[n] <= self.a[min_child]:
-					break
+					return	
 				self.a[n], self.a[min_child] = self.a[min_child], self.a[n]
 				n, left, right = min_child, 2 * min_child + 1, 2 * min_child + 2
-				continue
+			return
 
-			if self.a[max_child] <= self.a[n]:
-				break
+		while left <= len(self.a) - 1:
+			if right == len(self.a):
+				if self.a[n] >= self.a[left]:
+					return
+				self.a[n], self.a[left] = self.a[left], self.a[n]
+				return
+
+			if self.a[left] <= self.a[right]:
+				min_child, max_child = left, right
+			else:
+				min_child, max_child = right, left
+
+			if self.a[n] >= self.a[max_child]:
+				return	
 			self.a[n], self.a[max_child] = self.a[max_child], self.a[n]
 			n, left, right = max_child, 2 * max_child + 1, 2 * max_child + 2
 	
