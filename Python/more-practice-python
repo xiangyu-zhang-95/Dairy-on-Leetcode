@@ -21,3 +21,17 @@
 308
 315 Red-Black-Tree
 316 unsolved
+322 pay attention when using a mutable object as default parameter. https://docs.python.org/2.0/ref/function.html
+324
+327 binary-indexed-tree
+330 unsolved
+331 easy to make mistakes
+335 unsolved
+336 write the code again
+341 using stack
+354 dp + bonary search
+363 binary-indexed tree
+376 O(n) solution
+391
+393 poor problem description
+395
