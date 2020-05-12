@@ -76,3 +76,6 @@ class heap:
 	
 	def __contains__(self, key):
 		return key in self.a
+	
+	def __str__(self):
+		return str(self.a)
