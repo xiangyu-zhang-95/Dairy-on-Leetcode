@@ -35,3 +35,6 @@
 391
 393 poor problem description
 395
+406 O(n log n)
+411 trie + brute force
+418 cache precomputation
