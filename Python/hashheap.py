@@ -76,4 +76,4 @@ class hashheap:
 		return key in self.map
 	
 	def __str__(self):
-		print(self.a)
+		return str(self.a)
