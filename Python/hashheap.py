@@ -74,3 +74,6 @@ class hashheap:
 	
 	def __contains__(self, key):
 		return key in self.map
+	
+	def __str__(self):
+		return str(self.a)
