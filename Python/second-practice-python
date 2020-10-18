@@ -1,0 +1,37 @@
+57 easy to make mistake
+65 vague description
+99 Morris traversal
+164 tricky bin-up method
+215 easy to make mistake: quick find
+220 balanced binary search tree
+224 hard to implement
+229 tricky greedy algorithm
+255 memory complexity does not count in input memory; preorder + monotone stack + binary search tree => inorder traversal
+287 tricky two pointer
+301 easy to make mistake, more practice
+308
+322 pay attention when using a mutable object as default parameter. https://docs.python.org/2.0/ref/function.html
+324 easy to make mistake, more practice
+330 tricky greedy algorithm 
+335 unsolved
+354 dynamic programming + binary search
+391 rectangle cover algorithm
+393 poor problem description
+406 O(n * log n * log n)
+411 trie + brute force
+418 cache precomputation
+420
+421
+424
+432 implementation double linkedlist
+440
+446
+456 132Pattern
+460 double linked list
+465 brute-force
+466 ambiguous
+471
+488 vague description
+489 implementation
+493 sortedlist
+499 Djkstra
